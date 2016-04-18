@@ -1,0 +1,69 @@
+.dashboard__footer{
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: $col-dark;
+    @include vertical-align(".footer-slide");
+    @include bp(){
+        height: 70px;
+    }
+
+    .footer-logos{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
+        padding: 0 45px;
+        @include vertical-align(".footer-logos__item");
+        @include bp(){
+            padding: 0 31px;
+            img{
+                max-height: 50px;
+            }
+        }
+    }
+
+    .footer-logos__item{
+        display: inline-block;
+        padding: 0 25px;
+
+        @include bp(){
+            padding: 0 17px;
+        }
+    }
+
+    .footer-slide{
+        width: 445px;
+        position: absolute;
+        padding: 17px 30px 17px 95px;
+        font: 25px/1.2 $hevleticaLt;
+        color: $white;
+        top: 0;
+        right: 0;
+
+        &:before{
+            content: "";
+            position: absolute;
+            width: 50px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background: url("../images/ico-swipe.svg") no-repeat 50% 50%/ 48px 53px;
+        }
+        @include bp(){
+            width: 312px;
+            position: absolute;
+            padding: 12px 21px 12px 66px;
+            font-size: 17.5px;
+
+            &:before{
+                width: 35px;
+                background: url("../images/ico-swipe.svg") no-repeat 50% 50%/ 33px 37px;
+            }
+        }
+    }
+}

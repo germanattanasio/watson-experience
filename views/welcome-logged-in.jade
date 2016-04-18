@@ -1,0 +1,34 @@
+extends ./layouts/master.jade
+
+block content
+  section.page-content.check-for-twitter(v-touch:tap='gotoInsights')
+    .page-content__inner
+      .content__greetings
+        .avatar
+          img(src='#{locals.session.image}')
+        .content.content__huge
+          | #{locals.session.gretting}.
+          br
+          | Welcome to the cognitive era.
+      .content__bottom
+        .content__right Touch anywhere to begin. Swipe left at any time to end your session.
+  
+  #askTwitterModal.modal.fade(data-backdrop='false', tabindex='-1', role='dialog')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-body
+          .first-padding
+            h1 Get Started
+            .modal-row__input
+              .input-with-icon
+                i.fa.fa-twitter
+                input#askForTwitterInput(placeholder='Enter your twitter handle', v-model='user_inputted_twitter', name='twitter_id', autofocus='', type='text')
+              .helper-message See your personality insight from Watson
+            .modal-row__input
+              .input-with-icon
+                i.fa.fa-envelope
+                input(placeholder='Enter your email address (required)', v-model='user_inputted_email', name='email', type='text')
+          .second-padding
+            .modal-row__button
+              a(v-on:click.prevent='noTwitter', style='float: left; text-align: left;') skip
+              a(href='#', v-on:click.prevent='saveTwitter') Submit

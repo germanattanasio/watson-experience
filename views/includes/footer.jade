@@ -1,0 +1,5 @@
+footer.dashboard__footer(v-show=' !confirm_end && !inactive ', v-touch:swipeleft='confirmEndSession')
+  .footer-logos
+    .footer-logos__item
+      img(src="images/logos.png", height='49')
+  .footer-slide(v-touch:tap='confirmEndSession') Touch here to end your session and clear the table

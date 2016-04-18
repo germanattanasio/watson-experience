@@ -1,0 +1,14 @@
+declared-services:
+  personality-insights-service:
+    label: personality_insights
+    plan: tiered
+applications:
+- services:
+  - personality-insights-service
+  name: watson-experience
+  command: npm start
+  path: .
+  memory: 512M
+  env:
+    CF_STAGING_TIMEOUT: 15
+    CF_STARTUP_TIMEOUT: 180 # 3 minutes

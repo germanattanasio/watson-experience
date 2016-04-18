@@ -1,0 +1,96 @@
+.dashboard__header{
+    position: absolute;
+    background: $col-dark;
+    height: 135px;
+    opacity: 1;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+
+    @include bp(){
+        height: 95px;
+    }
+}
+
+.greeting{
+    position: relative;
+    float: left;
+}
+
+.dashboard__header-inner{
+    position: relative;
+    padding: 17px 19px;
+    @include clearfix;
+
+    @include bp(){
+        padding: 11px 13px;
+    }
+}
+.greeting__avatar{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px solid $white;
+    float: left;
+    margin-right: 30px;
+    img{
+        width: 100%;
+        display: block;
+    }
+
+    @include bp(){
+        height: 70px;
+        width: 70px;
+        margin-right: 21px;
+    }
+}
+
+.greeting__name{
+    float: left;
+    margin-right: 35px;
+    padding: 15px 0 0 0;
+    @include bp(){
+        margin-right: 25px;
+        padding: 10px 0 0 0;
+    }
+}
+
+.greeting__title{
+    font: 35px/35px $hevleticaThin;
+    color: $white;
+    @include bp(){
+        font-size: 24.5px;
+        line-height: 1;
+    }
+}
+
+.greeting__twitter{
+    font: 30px/30px $hevleticaThin;
+    color: $white;
+
+    @include bp(){
+        font-size: 21px;
+        line-height: 1;
+    }
+}
+
+.header__title{
+    position: relative;
+    float: left;
+    padding-top: 5px;
+
+    p{
+        font: 55px/90px $hevleticaThin;
+        color: $white;
+        padding-left: 40px;
+        border-width: 0 0 0 1px;
+        border-color: $white;
+        border-style: solid;
+
+        @include bp(){
+            font-size: 38.5px;
+            line-height: 63px;
+            padding-left: 28px;
+        }
+    }
+}

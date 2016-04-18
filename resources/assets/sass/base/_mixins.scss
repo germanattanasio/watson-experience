@@ -1,0 +1,336 @@
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+@mixin bp() {
+    @media screen and (max-width: 1665px) { @content; }
+}
+
+@mixin line {
+    display: inline-block;
+    width: $panel-button-size;
+    height: $panel-button-width;
+    background: $col-font-std;
+    border-radius: 999px;
+    transition: $panel-transition;
+}
+// Add hovers only for no-touch devices
+// Requires: Modernizr feature test for touch/no-touch
+@mixin no-touch-hover {
+    // Make sure you're not arleady inside a html > selector or this wont work!
+    .no-touchevents & {
+        &:hover {
+            @content;
+        }
+    }
+}
+// Example Usage:
+// a {
+//     @include no-touch-hover {
+// 	       color: black;
+//     }
+// }
+// Example would compile to html.no-touch a:hover { color: black; }
+
+
+
+@mixin list-diamond($color){
+  position: relative;
+
+  &:before{
+    content: "\25c6";
+    color: $color;
+    position: absolute;
+    left: 0;
+    top: -4px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+@mixin list-circle-number($color){
+  position: relative;
+  counter-increment: step-counter;
+
+  &:before {
+    content: counter(step-counter);
+    color: $color;
+    font-size: 13px;
+    font-weight: 700;
+    @include borderRadius(999px);
+    border: 1px solid $color;
+    width: 21px;
+    height: 21px;
+    display: block;
+    font-family: $font-base;
+    text-align: center;
+    line-height: 18px;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+  }
+}
+
+@mixin hide-text {
+	text-align: left;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+@mixin center() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin blank-text {
+	font-size: 0;
+	line-height: 0;
+}
+
+@mixin responsive-image {
+	display: block;
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+@mixin placeholder-color($color) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&::-moz-placeholder {
+		color: $color;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+@mixin position-side {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@mixin singleLine {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+@mixin arrow($direction, $color, $size-transparent, $size){
+	display: block;
+	height: 0;
+	width: 0;
+	
+	@if $direction == 'top' {
+		border-left: $size-transparent solid transparent;
+		border-right: $size-transparent solid transparent;
+		border-bottom: $size solid $color;
+	} @else if $direction == 'right' {
+		border-top: $size-transparent solid transparent;
+		border-bottom: $size-transparent solid transparent;
+		border-left: $size solid $color;
+	} @else if $direction == 'bottom' {
+		border-top: $size solid $color;
+		border-right: $size-transparent solid transparent;
+		border-left: $size-transparent solid transparent;
+	} @else if $direction == 'left' {
+		border-top: $size-transparent solid transparent;
+		border-right: $size solid $color;
+		border-bottom: $size-transparent solid transparent;
+	} @else if $direction == 'top-left' {
+		border-top: $size solid $color;
+		border-right: $size-transparent solid transparent;
+	} @else if $direction == 'top-right' {
+		border-top: $size solid $color;
+		border-left: $size-transparent solid transparent;
+	} @else if $direction == 'bottom-left' {
+		border-bottom: $size solid $color;
+		border-right: $size-transparent solid transparent;
+	} @else if $direction == 'bottom-right' {
+		border-bottom: $size solid $color;
+		border-left: $size-transparent solid transparent;
+	}
+}
+
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+	@if $vendors {
+		@each $vendor in $vendors {
+			#{"-" + $vendor + "-" + $property}: #{$value};
+		}
+	}
+	#{$property}: #{$value};
+}
+
+@mixin box-shadow($properties...) {
+	@include prefix('box-shadow', $properties);
+}
+
+@mixin box-sizing($type: border-box) {
+	@include prefix('box-sizing', $type);
+}
+
+@mixin transform($param) {
+	@include prefix('transform', $param);
+}
+
+@mixin transform-origin($param) {
+	@include prefix('transform-origin', $param);
+}
+
+@mixin transition($properties...) {
+	@if length($properties) >= 1 {
+		@include prefix('transition', $properties);
+	}
+	@else {
+		@include prefix('transition', $what: all, $length: 1s, $easing: ease-in-out);
+	}
+}
+
+$prefixes: -webkit-, -moz-, -o-, "";
+
+@mixin border-radius($size...) {
+    @if length($size) == 1 {
+        @each $prefix in $prefixes {
+            #{$prefix}border-radius: $size;
+        }
+    } @else {
+        @include customBorderRadius($size...);
+    }
+}
+
+@mixin borderRadius($size...) {
+  @if length($size) == 1 {
+	@each $prefix in $prefixes {
+	  #{$prefix}border-radius: $size;
+	}
+  } @else {
+	@include customBorderRadius($size...);
+  }
+}
+
+@mixin customBorderRadius($topLeft: 0, $topRight: 0, $bottomRight: 0, $bottomLeft: 0) {
+  @each $prefix in $prefixes {
+	@if $prefix == "-moz-" {
+	  @if $topLeft != 0 { -moz-border-radius-topleft: $topLeft; }
+	  @if $topRight != 0 { -moz-border-radius-topright: $topRight; }
+	  @if $bottomRight != 0 { -moz-border-radius-bottomright: $bottomRight; }
+	  @if $bottomLeft != 0 { -moz-border-radius-bottomleft: $bottomLeft; }
+	} @else {
+	  @if $topLeft != 0 { #{$prefix}border-top-left-radius: $topLeft; }
+	  @if $topRight != 0 { #{$prefix}border-top-right-radius: $topRight; }
+	  @if $bottomRight != 0 { #{$prefix}border-bottom-right-radius: $bottomRight; }
+	  @if $bottomLeft != 0 { #{$prefix}border-bottom-left-radius: $bottomLeft; }
+	}
+  }
+}
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+@mixin bb {
+    @include box-sizing(border-box);
+}
+
+// Grayscale
+@mixin grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+}
+
+// Grayscale Remove
+@mixin grayscale-remove {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-filter: grayscale(0%);
+}
+
+@mixin background-size($size){
+    background-size: $size;
+}
+
+// Image background cover
+@mixin image-cover {
+    @include background-size(cover);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+// Image background contain
+@mixin image-contain {
+    @include background-size(contain);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+// SVG background-images with fallback - defaults to png
+@mixin svg-image($image, $width, $height, $image-type: 'png', $position: 'center center', $repeat: 'no-repeat') {
+    background-color: transparent;
+    background-image: url(#{$image-dir}#{$image}.#{$image-type}); // Fallback png or jpg image
+    background-image: -webkit-linear-gradient(transparent, transparent), url(#{$image-dir}#{$image}.svg);
+    background-image: linear-gradient(transparent, transparent), url(#{$image-dir}#{$image}.svg);
+    background-position: #{$position};
+    background-repeat: #{$repeat};
+    @include background-size($width $height);
+}
+// EG: @include svg-image($image: 'payment/american_express', $width: $card-width, $height: $card-height);
+
+@mixin vertical-align($element: "div") {
+    font-size: 0;
+
+    > #{$element} {
+        vertical-align: middle;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+@mixin wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $site-width;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+%bb {
+    @include bb;
+}
+
+%clearfix {
+    @include clearfix;
+}
+
+%wrap {
+    @include wrap;
+}

@@ -1,0 +1,10 @@
+section.page-content(v-show='confirm_end')
+  .page-content__inner
+    .content__appeal
+      .content
+        | Are you sure you want to leave?
+        br
+        strong(v-touch:tap='endSession') Yes, I want to leave
+        |   
+        strong(v-touch:tap='goBackToDashboard') Take me back to the table
+  .page-content__bottom-bg

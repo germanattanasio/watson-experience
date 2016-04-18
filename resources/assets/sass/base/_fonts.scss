@@ -1,0 +1,101 @@
+/* fonts */
+@font-face {
+	font-family: 'HelveticaNeueLTStd-Roman';
+	src: url('#{$fonts}HelveticaNeueLTStd-Roman_gdi.eot');
+	src: url('#{$fonts}HelveticaNeueLTStd-Roman_gdi.eot?#iefix') format('embedded-opentype'),
+		url('#{$fonts}HelveticaNeueLTStd-Roman_gdi.woff') format('woff'),
+		url('#{$fonts}HelveticaNeueLTStd-Roman_gdi.ttf') format('truetype'),
+		url('#{$fonts}HelveticaNeueLTStd-Roman_gdi.svg#HelveticaNeueLTStd-Roman') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+@font-face {
+	font-family: 'HelveticaNeueLTStd-Bd';
+	src: url('#{$fonts}HelveticaNeueLTStd-Bd_gdi.eot');
+	src: url('#{$fonts}HelveticaNeueLTStd-Bd_gdi.eot?#iefix') format('embedded-opentype'),
+		url('#{$fonts}HelveticaNeueLTStd-Bd_gdi.woff') format('woff'),
+		url('#{$fonts}HelveticaNeueLTStd-Bd_gdi.ttf') format('truetype'),
+		url('#{$fonts}HelveticaNeueLTStd-Bd_gdi.svg#HelveticaNeueLTStd-Bd') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTStd-Lt';
+	src: url('#{$fonts}HelveticaNeueLTStd-Lt_gdi.eot');
+	src: url('#{$fonts}HelveticaNeueLTStd-Lt_gdi.eot?#iefix') format('embedded-opentype'),
+		url('#{$fonts}HelveticaNeueLTStd-Lt_gdi.woff') format('woff'),
+		url('#{$fonts}HelveticaNeueLTStd-Lt_gdi.ttf') format('truetype'),
+		url('#{$fonts}HelveticaNeueLTStd-Lt_gdi.svg#HelveticaNeueLTStd-Lt') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+	font-family: 'HelveticaNeueLTStd-UltLt';
+	src: url('#{$fonts}HelveticaNeueLTStd-UltLt_gdi.eot');
+	src: url('#{$fonts}HelveticaNeueLTStd-UltLt_gdi.eot?#iefix') format('embedded-opentype'),
+		url('#{$fonts}HelveticaNeueLTStd-UltLt_gdi.woff') format('woff'),
+		url('#{$fonts}HelveticaNeueLTStd-UltLt_gdi.ttf') format('truetype'),
+		url('#{$fonts}HelveticaNeueLTStd-UltLt_gdi.svg#HelveticaNeueLTStd-UltLt') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+0020-25CA;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:    url('#{$fonts}icomoon.eot?2rny2c7a');
+    src:    url('#{$fonts}icomoon.eot?2qrnyc7a#iefix') format('embedded-opentype'),
+    url('#{$fonts}icomoon.ttf?2rwnyc7a') format('truetype'),
+    url('#{$fonts}icomoon.woff?2rnyec7a') format('woff'),
+    url('#{$fonts}icomoon.svg?r2nyqc7a#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ico-hand:before {
+    content: "\e906";
+}
+
+.icon-ico-arrow-right-circle:before {
+    content: "\e905";
+}
+.icon-ico-cross:before {
+    content: "\e900";
+}
+.icon-ico-refresh:before {
+    content: "\e901";
+}
+.icon-ico-swipe:before {
+    content: "\e902";
+}
+.icon-ico-arrow-left:before {
+    content: "\e903";
+}
+.icon-ico-arrow-right:before {
+    content: "\e904";
+}
+

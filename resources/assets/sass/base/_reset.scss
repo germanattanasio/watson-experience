@@ -1,0 +1,304 @@
+/* reset */
+article, aside, details, figcaption, figure, footer, header, img, hgroup, main, menu, nav, section, video {
+    display: block;
+}
+
+// better than using slow * selector
+a, abbr, acronym, address, article, aside, audio, blockquote, body, canvas, cite, code, div, dd, dl, dt, em, figcaption, figure, fieldset, footer, form, header, hgroup, html, h1, h2, h3, h4, h5, h6, iframe, img, label, li, mark, nav, ol, optgroup, p, pre, q, span, strong, sub, sup, table, tbody, td, textarea, tfoot, th, thead, tr, section, time, ul, video {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover,
+a:active,
+a:focus,
+object,
+*:focus {
+    outline: 0 none transparent;
+}
+
+body, html {
+    min-height: 100%;
+    background: $col-dark;
+}
+
+*{
+    @include box-sizing();
+}
+
+input, optgroup, select, textarea {
+    @include box-sizing();
+    @include borderRadius(0);
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button {
+    @include borderRadius(0);
+    display: inline-block;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+// Remove inner padding and border in Firefox 4+.
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%; // disbales font size increase with orientation change
+    -ms-text-size-adjust: 100%;
+}
+
+input {
+    line-height: normal;
+    margin: 0;
+
+    &[type="number"], &[type="search"], &[type="text"] {
+        -webkit-appearance: none;
+    }
+
+    &[type="password"] {
+        font-family: arial, sans-serif;
+    }
+
+    &[type="submit"] {
+        @include box-sizing();
+        cursor: pointer;
+        @include borderRadius(0);
+        @include box-shadow(none);
+        -webkit-appearance: none;
+    }
+}
+
+img {
+    border: none;
+    height: auto;
+    max-width: 100%;
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+
+body {
+	font: $base-font-size $font-base;
+	line-height: $base-line-height;
+	color: $col-font-std;
+	background: $body-bg;
+	margin: 0;
+	min-width: 320px;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+a {
+	text-decoration: none;
+	color: $col-dark;
+	@include transition(color 0.3s ease, background 0.3s ease, border 0.3s ease);
+}
+
+*:focus, a:focus, a:visited{
+  outline: none;
+  text-decoration: none;
+}
+.visually-hidden {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+img {border: none;}
+form,
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+input,
+select,
+textarea {
+	font: 100% $font-base;
+	vertical-align: middle;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: none;
+	cursor: pointer;
+	@include transition(all 0.3s ease);
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+	border: none;
+	padding: 0;
+}
+blockquote, q {quotes: none;}
+q:before,
+q:after {content: "";}
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {outline: none;}
+header,
+footer,
+section,
+nav,
+article,
+aside {display: block;}
+.text-justify {
+	text-align: justify;
+}
+
+::-webkit-input-placeholder {
+  color: $color-form-input;
+  opacity: 1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: $color-form-input;
+  opacity: 1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $color-form-input;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: $color-form-input;
+  opacity: 1;
+}
+
+.container{
+  > .row{
+	position: relative;
+  }
+}
+
+.height-full{
+  height: 100%;
+  > .container {
+    height: 100%;
+    > .row {
+      height: 100%;
+      > div {
+        height: 100%;
+      }
+    }
+  }
+}
+
+.with-bg{
+  background: no-repeat 50% top;
+  background-size: cover;
+  &.bg-bottom{
+	-ms-background-position-y: 100%;
+	background-position-y: 100%;
+  }
+  &.bg-right{
+	-ms-background-position-x: 100%;
+	background-position-x: 100%;
+  }
+  &.bg-left{
+	-ms-background-position-x: 0;
+	background-position-x: 0;
+  }
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	left: -999em;
+}
+.skip-link {
+	position: absolute;
+	top: -34px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	overflow: hidden;
+	color: $white;
+	text-decoration: none;
+	padding: 4px 10px 6px;
+	@include box-sizing();
+	font-size: 20px;
+	line-height: 24px;
+	height: 34px;
+	z-index: 999;
+}
+.skip-link:focus,
+.skip-link:active{
+	position: absolute;
+	top: 0;
+	overflow: visible;
+}
+.skip-link:hover{
+	color: $black;
+	background: $white;
+	text-decoration: none;
+}
+.slick-slide:focus {
+	outline: none !important;
+}
+.col50{
+  width: 50%;
+  float: left;
+  padding: 0;
+}
+.btn{
+    @extend %btn;
+}

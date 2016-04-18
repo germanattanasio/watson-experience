@@ -1,0 +1,20 @@
+<svg id="7771f47f-2c4f-4679-9634-7991482538d5" data-name="Menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="44.32" viewBox="0 0 60 44.32">
+  <defs>
+    <symbol id="54f3ae6a-a224-4a66-bc33-0cf61356f12e" data-name="MENU MIN" viewBox="0 0 64.98 48">
+      <rect width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect x="16.89" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect x="33.78" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect x="50.76" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect y="16.89" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect x="16.89" y="16.89" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect x="33.78" y="16.89" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect x="50.76" y="16.89" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect y="33.78" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect x="16.89" y="33.78" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect x="33.78" y="33.78" width="14.22" height="14.22" style="fill: #ef5254"/>
+      <rect x="50.76" y="33.78" width="14.22" height="14.22" style="fill: #ef5254"/>
+    </symbol>
+  </defs>
+  <title>ico-menu</title>
+  <use id="52e56f4c-361c-432e-96b7-76c1f12c47bc" data-name="MENU MIN" width="64.98" height="48" transform="translate(0 0) scale(0.92)" xlink:href="#54f3ae6a-a224-4a66-bc33-0cf61356f12e"/>
+</svg>

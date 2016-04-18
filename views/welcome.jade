@@ -1,0 +1,22 @@
+extends ./layouts/master.jade
+
+block content
+  section.page-content(v-touch:tap='loginUser')
+    .page-content__inner
+      .content__appeal
+        .content.content__huge(style='top: 50px') Tap anywhere to say hello.
+      .content__bottom
+        .content__privacy
+          .content__checkbox
+            input#privacy-checkbox.privacy-checkbox(v-model='termsOfService', type='checkbox', value='agree', name='privacy-checkbox')
+            label#main-tooltip(for='privacy-checkbox', data-trigger='manual', data-title='Please accept the privacy terms before continuing') I agree to the IBM Privacy Terms
+          a(href='#privacy-modal', data-toggle='modal') IBM Privacy Policy
+  #privacy-modal.modal.fade(tabindex='-1', role='dialog')
+    .modal-dialog(role='document')
+      .modal-content
+        .modal-body
+          .modal-row__title
+            a(style='float: right; color: white; text-align: left;', data-dismiss='modal') close
+            p IBM Privacy Policy
+            .privacy-box
+              include ./includes/privacy.jade

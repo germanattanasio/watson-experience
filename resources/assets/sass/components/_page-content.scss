@@ -1,0 +1,172 @@
+.page-content{
+    background: $col-dark;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    
+    .page-content__inner{
+        color: $white;
+        position: absolute;
+        top: 46.75vh;
+        left: 23vw;
+        bottom: 8.5vh;
+        right: 8.5vh;
+    }
+
+    .content{
+        width: 59vw;
+        position: absolute;
+        font-family: $hevleticaThin;
+        font-size: 55px;
+
+        &.content__huge {
+            font-size: 65px;
+        }
+
+        .twitter{
+            font-size: 45px;
+        }
+        @include bp(){
+            font-size: 40px;
+
+            &.content__huge {
+                font-size: 47px;
+            }
+
+            .twitter{
+                font-size: 34px;
+            }
+        }
+    }
+
+    .content__appeal{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100px;
+        padding: 0 0 0 30px;
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: $white;
+        }
+        .content{
+            //top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .content__greetings{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100px;
+        padding: 0 0 0 30px;
+
+        .avatar{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 0;
+            left: -105px;
+            border: 1px solid $white;
+
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+        .content{
+            line-height: 1;
+        }
+    }
+
+
+}
+.page-content__bottom-bg{
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../images/bg-bottom.jpg") no-repeat 50% 50%/cover;
+}
+
+.content__bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    .content__right{
+        font-family: $hevleticaThin;
+        font-size: 45px;
+        text-align: right;
+    }
+}
+
+.content__privacy{
+    line-height: 1.2;
+    padding-left: 30px;
+
+    .content__checkbox{
+        margin-bottom: 40px;
+    }
+    input[type=checkbox] {
+        display: none;
+    }
+    label:before {
+        content: "";
+        display: inline-block;
+
+        width: 25px;
+        height: 25px;
+        border: 1px solid rgba($white, 0.3);
+        margin-right: 10px;
+        position: absolute;
+        left: 0;
+        bottom: 1px;
+        background-color: $white;
+    }
+    input[type=checkbox]:checked + label:before {
+        content: "\2713";
+        font-size: 24px;
+        color: $col-dark;
+        text-align: center;
+        line-height: 24px;
+    }
+    label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 40px;
+        margin-right: 15px;
+        font-family: $hevleticaThin;
+        font-size: 20px;
+        color: $white;
+    }
+    p{
+        font-family: $hevleticaThin;
+        font-size: 20px;
+        color: $white;
+        margin: 0;
+        max-width: 760px;
+    }
+    a{
+        display: inline-block;
+        padding: 40px 0 0 0;
+        margin-left: 40px;
+        font-family: $hevleticaThin;
+        font-size: 20px;
+        color: $white;
+        border-bottom: 1px solid $white;
+        &:hover{
+            border-bottom: 1px solid transparent;
+        }
+    }
+}

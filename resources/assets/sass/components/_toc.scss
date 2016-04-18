@@ -1,0 +1,31 @@
+.index-toc{
+    width: 100vw;
+    height: 100vh;
+    background: $col-dark;
+    @include vertical-align(".index-toc__content");
+}
+
+.index-toc__content{
+    text-align: center;
+    width: 100%;
+    a{
+        font-family: $hevleticaLt;
+        font-size: 40px;
+        color: $white;
+        display: block;
+        margin-bottom: 10px;
+        text-decoration: underline;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    h1{
+        font-family: $hevleticaBold;
+        font-weight: normal;
+        font-size: 40px;
+        color: $white;
+        display: block;
+        margin-bottom: 10px;
+    }
+}

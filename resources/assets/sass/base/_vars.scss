@@ -1,0 +1,85 @@
+// vars
+$images: '../images/';
+$image-dir: "../images/";
+$fonts: '../fonts/';
+// fonts
+
+$hevleticaThin: "HelveticaNeueLTStd-UltLt",  Helvetica, Arial, sans-serif;
+$hevleticaLt: "HelveticaNeueLTStd-Lt",  Helvetica, Arial, sans-serif;
+$hevleticaBold: "HelveticaNeueLTStd-Bd",  Helvetica, Arial, sans-serif;
+$hevletica: "HelveticaNeueLTStd-Roman",  Helvetica, Arial, sans-serif;
+$arial: Arial, sans-serif;
+
+$site-width: 1920px;
+
+$base-font-size: 16px;
+$base-line-height: 1.25;
+
+$font-base: $hevletica;
+
+// opacity
+$hover-opacity: 0.85;
+
+
+// colors
+$white: #EFF2F5;
+
+$black: #000;
+
+$gray: #606060;
+
+$col-red: #F05254;
+$col-red-light: #F37A85;
+$col-violet: #553176;
+$col-violet-light: #845CA6;
+$col-dark: #333D3E;
+$col-blue: #3F77BC;
+$col-blue-dark: #325D80;
+$col-green: #5BC4BA;
+$col-silver: #CAD3D4;
+$col-bg-cognitive: #C9D3D4;
+$col-font-std: #323C3D;
+$col-font-inv: #EEF1F3;
+
+$body-bg: $white;
+$color-form-input: $col-dark;
+$col-attention: $col-red;
+
+$db-header-height: 135px;
+$db-footer-height: 100px;
+$db-panel-button: 30px;
+$db-apps-height: 60px;
+$db-apps-button: 60px;
+$db-apps-border: 10px;
+$db-panel-left-width: 480px;
+$db-panel-right-width: 340px;
+$db-panel-left-content-width: 400px;
+$db-panel-left-content-data-width: 335px;
+$db-accordion-header-height: 80px;
+$db-accordion-button: 33px;
+$db-accordion-content-height: 160px;
+$db-components-button: 60px;
+$db-components-button-border: 5px;
+
+$db-r-header-height: 94px;
+$db-r-footer-height: 70px;
+$db-r-panel-button: 21px;
+$db-r-apps-height: 42px;
+$db-r-apps-button: 42px;
+$db-r-apps-border: 7px;
+$db-r-panel-left-width: 336px;
+$db-r-panel-right-width: 238px;
+$db-r-accordion-header-height: 56px;
+$db-r-accordion-button: 23px;
+$db-r-accordion-content-height: 112px;
+$db-r-components-button: 42px;
+$db-r-components-button-border: 3px;
+
+$db-app-size: 160px;
+$db-app-gutter: 30px;
+
+
+$panel-button-size : $db-panel-button;
+$panel-r-button-size : $db-r-panel-button;
+$panel-button-width: 1px;
+$panel-transition: .3s;

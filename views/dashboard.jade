@@ -1,0 +1,103 @@
+extends ./layouts/master.jade
+
+block title
+  title Cognitive Dashboard
+
+block content
+  .dashboard-anim-overlay
+  include ./includes/header.jade
+  script.
+    var alreadyClickedApps = [];
+
+  section.dashboard__main(v-show=' !confirm_end && !inactive ', v-touch:swipeleft='confirmEndSession')
+    .dashboard-iframe(v-touch:swipeleft='confirmEndSession')
+      #window-iframe(style='float: right;')
+        iframe#main-window-frame(v-touch:swipeleft='confirmEndSession', :src='application.iframe_url[current_role] !== undefined ? application.iframe_url[current_role] : application.iframe_url.startup', width='100%', style='float: right')
+    .dashboard-apps
+      .dashboard-apps__wrapper
+        .apps-wrap
+          #apps-stack-1.apps-stack
+            div(v-bind:class="{'apps-stack__item': true, 'visited': isAppVisited(app.name),  'active': partially_opened_app == app.id}", v-if='index <= 3', v-for='(index,app) in applications')
+              .item-inner(v-on:click='changeApp(app.id,app.name,$event)')
+                b {{app.initials}}
+                span {{app.name}}
+                .app-desc
+                  p
+                    | {{app.description}}
+                    strong Open App
+                i.icon-ico-hand
+                i.button__close-app.icon-ico-cross(v-touch:tap='closeApp()', style='z-index: 1000000')
+          #apps-stack-2.apps-stack
+            div(v-bind:class="{'apps-stack__item': true, 'visited': isAppVisited(app.name), 'active': partially_opened_app == app.id}", v-if='index > 3 && index <= 7', v-for='(index,app) in applications')
+              .item-inner(v-on:click='changeApp(app.id,app.name,$event)')
+                b {{app.initials}}
+                span {{app.name}}
+                .app-desc
+                  p
+                    | {{app.description}}
+                    strong Open App
+                i.icon-ico-hand
+                i.button__close-app.icon-ico-cross(v-touch:tap='closeApp()', style='z-index: 1000000')
+          #apps-stack-3.apps-stack.apps-stack-last
+            div(v-bind:class="{'apps-stack__item': true, 'visited': isAppVisited(app.name), 'active': partially_opened_app == app.id}", v-if='index > 7', v-for='(index,app) in applications')
+              .item-inner(v-on:click='changeApp(app.id,app.name,$event)')
+                b {{app.initials}}
+                span {{app.name}}
+                .app-desc
+                  p
+                    | {{app.description}}
+                    strong Open App
+                i.icon-ico-hand
+                i.button__close-app.icon-ico-cross(v-touch:tap='closeApp()', style='z-index: 1000000')
+      .dashboard-menu__button(style='z-index: 1000000000000', v-touch:tap='backToHome()')
+    .dashboard-panel.dashboard-panel__left(data-state='default')
+      .dashboard-panel__title
+        p experience
+        a.title-button(href='#')
+          span.icon-ico-arrow-left
+      .dashboard-panel__body
+        .content
+          p {{application.description}}
+          h2 cognitive components
+          .cognitive-content
+            div(v-show='!selected_component')
+              br
+              h3 Explore cognitive components
+              p
+                | Click an icon to the right to explore the cognitive components used in @{{application.name}}}
+            div(v-else='')
+              br
+              div(v-for='section in component.content_blocks')
+                h3 {{section.header}}
+                p {{section.content}}
+            .cogcom__wrapper
+              .cogcom__items
+                .cogcom__item(v-show='isActiveComponent(item.slug)', v-for='item in components')
+                  a(v-on:click.prevent='changeComponent(item.slug)', v-bind:style="{ backgroundImage: 'url(/images/'+ item.icon + ')' }")
+        .icon-ico-hand(style='display: none')
+    .dashboard-panel.dashboard-panel__right(data-state='collapsed')
+      .dashboard-panel__title
+        a.title-button(href='#')
+          span.icon-ico-arrow-right
+        p area
+      .dashboard-panel__body
+        .dashboard-accordion
+          .accordion-item(id='dash-accord-@{{ index }}', v-for='(index, role) in roles')
+            .accordion-item__header
+              a(href='#dash-accord-@{{index}}')
+                | {{role.title}}
+                i
+                  span.lines
+            .accordion-item__content
+              p {{role.definition}}
+              .accordion-item__refresh(v-on:click='updateRole(role.slug)')
+    .panel-cognitive
+      .cognitive-iframe
+        iframe(:src='component.url', style='width: 100%; height: 100%;')
+      .cognitive-button__close(v-touch:tap='closeCognitive')
+        i.icon-ico-arrow-right
+    .dashboard-apps-overlay
+
+  include ./includes/footer.jade
+  include ./includes/inactive.jade
+  include ./includes/confirm-exit.jade

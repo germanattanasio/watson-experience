@@ -1,0 +1,11 @@
+header.dashboard__header(v-show=' !confirm_end && !inactive ', v-touch:swipeleft='confirmEndSession')
+  .dashboard__header-inner
+    .greeting
+      .greeting__avatar
+        img(src='#{locals.session.image}')
+      .greeting__name
+        .greeting__title #{locals.session.gretting}.
+        if locals.session.twitter_id
+          .greeting__twitter #{locals.session.twitter_id}
+    .header__title
+      p #{dashboard_header}

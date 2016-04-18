@@ -1,0 +1,112 @@
+.build-persona{
+    color: $white;
+    position: absolute;
+    top: 0;
+    right: 8.5vh;
+    width: 40vw;
+    bottom: 0;
+}
+
+.build-persona__title{
+    font-family: $hevleticaBold;
+    font-size: 35px;
+    margin-bottom: 25px;
+    @include bp(){
+        font-size: 27px;
+    }
+}
+
+.build-persona__content{
+    position: relative;
+    font-family: $hevleticaLt;
+    font-size: 30px;
+    padding-right: calc(260px + 5vh);
+
+    .build-persona__insight{
+        position: absolute;
+        right: 4vh;
+        top: 0;
+        width: 250px;
+        height: 250px;
+
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+
+    @include bp(){
+        font-size: 23px;
+        padding-right: calc(185px + 5vh);
+
+        .build-persona__insight{
+            position: absolute;
+            right: 4vh;
+            top: 0;
+            width: 180px;
+            height: 180px;
+
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
+.build-persona__continue{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    a{
+        display: inline-block;
+        font-family: $hevleticaBold;
+        font-size: 35px;
+        line-height: 48px;
+        color: $white;
+        vertical-align: middle;
+        i{
+            margin-left: 30px;
+            font-size: 48px;
+            vertical-align: middle;
+        }
+    }
+    @include bp(){
+        a{
+            font-size: 26px;
+            line-height: 35px;
+            color: $white;
+            vertical-align: middle;
+            i{
+                margin-left: 25px;
+                font-size: 36px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.build-persona__signs{
+    position: absolute;
+    left: 0;
+    top: -150px;
+
+    &:before{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: bottom;
+    }
+
+    img{
+        display: inline-block;
+        vertical-align: bottom;
+        & + img{
+            margin-left: 15px;
+        }
+    }
+    @include bp(){
+        top: -115px;
+    }
+
+}
