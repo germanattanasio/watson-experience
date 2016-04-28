@@ -10,5 +10,10 @@
     describe: true,
     it: true
   },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true
+  },
   "extends": "airbnb/legacy"
 }

@@ -27,4 +27,8 @@ describe('express', function testExpress() {
   it('404 when page not found', function testPageNotFound(done) {
     request(app).get('/foo/bar').expect(404, done);
   });
+
+  it('returns pi profile when GET /api/personality-insights', function testProfile(done) {
+    request(app).get('/foo/bar?twitter_id=germanatt').expect(200, done);
+  });
 });

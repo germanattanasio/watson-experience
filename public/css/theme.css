@@ -26,7 +26,7 @@
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -8420,12 +8420,12 @@ aside {
     .dashboard-panel[data-state='collapsed'].dashboard-panel__left .cogcom__wrapper .cogcom__item a {
       width: 60px;
       height: 60px;
-      background: no-repeat 50% 50% / 56px 56px; }
+      background: no-repeat 50% 50%/56px 56px; }
       @media screen and (max-width: 1665px) {
         .dashboard-panel[data-state='collapsed'].dashboard-panel__left .cogcom__wrapper .cogcom__item a {
           width: 42px;
           height: 42px;
-          background: no-repeat 50% 50% / 38px 38px; } }
+          background: no-repeat 50% 50%/38px 38px; } }
   @media screen and (max-width: 1665px) {
     .dashboard-panel[data-state='collapsed'].dashboard-panel__left .cogcom__wrapper {
       width: 42px; } }

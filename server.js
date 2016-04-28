@@ -17,10 +17,6 @@
 
 'use strict';
 
-if (process.env.GOOGLE_ANALYTICS) {
-  process.env.GOOGLE_ANALYTICS = process.env.GOOGLE_ANALYTICS.replace(new RegExp('"', 'g'), '');
-}
-
 var server = require('./app');
 var port = process.env.PORT || process.env.VCAP_APP_PORT || 3000;
 
