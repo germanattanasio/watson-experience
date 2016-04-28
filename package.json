@@ -8,6 +8,7 @@
     "cookie-parser": "^1.4.1",
     "cookie-session": "^2.0.0-alpha.1",
     "csurf": "^1.8.3",
+    "dotenv": "^2.0.0",
     "errorhandler": "~1.4.3",
     "express": "~4.13.4",
     "express-rate-limit": "^2.1.0",
