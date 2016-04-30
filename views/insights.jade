@@ -17,11 +17,11 @@ block content
             .build-persona__content(style='padding-right: 0;') Personality Insights extracts and analyzes a spectrum of personality attributes to help discover actionable insights about people and entities, and in turn guides end users to highly personalized interactions.
             .build-persona__continue(v-show='! personality_insights_loaded')
               a(href='javascript:;')
-                | loading your Personality Insight 
+                | Loading your Personality Insight 
                 i.fa.fa-spin.fa-spinner
-            .build-persona__continue(v-show='toggle_sunburst', style='z-index: 3000000000000; position: relative; top: 100px; left: 20px;')
+            .build-persona__continue(v-show='toggle_sunburst', style='z-index: 3000000000000;')
               a(href='/dashboard')
-                | continue to Watson apps 
+                | Continue to Watson apps 
                 i.icon-ico-arrow-right-circle
             .build-persona__continue(v-show='personality_insights_loaded && !toggle_sunburst')
               a(v-on:click.prevent='toggleSunburst()')

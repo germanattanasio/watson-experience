@@ -21,7 +21,7 @@
     "millennial": "https://visual-recognition-demo.mybluemix.net/",
     "company leader": "https://visual-recognition-demo.mybluemix.net/"
   },
-  "technologies": "[\"vision\",\"personality_insights\"]"
+  "technologies": "[\"vision\",\"visual_recognition\"]"
 }, {
   "id": 3,
   "name": "Audio Analysis",
@@ -33,7 +33,7 @@
     "millennial": "https://audio-analysis-application-starter-kit.mybluemix.net/",
     "company leader": "https://audio-analysis-application-starter-kit.mybluemix.net/"
   },
-  "technologies": "[\"discovery_advisor\"]"
+  "technologies": "[\"speech_to_text\",\"concept_insights\"]"
 }, {
   "id": 4,
   "name": "News Explorer",

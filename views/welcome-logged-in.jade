@@ -24,10 +24,6 @@ block content
                 i.fa.fa-twitter
                 input#askForTwitterInput(placeholder='Enter your twitter handle', v-model='user_inputted_twitter', name='twitter_id', autofocus='', type='text')
               .helper-message See your personality insight from Watson
-            .modal-row__input
-              .input-with-icon
-                i.fa.fa-envelope
-                input(placeholder='Enter your email address (required)', v-model='user_inputted_email', name='email', type='text')
           .second-padding
             .modal-row__button
               a(v-on:click.prevent='noTwitter', style='float: left; text-align: left;') skip

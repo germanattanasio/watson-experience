@@ -2,7 +2,7 @@
     color: $white;
     position: absolute;
     top: 0;
-    right: 8.5vh;
+    right: 2.5vh;
     width: 40vw;
     bottom: 0;
 }
@@ -24,7 +24,7 @@
 
     .build-persona__insight{
         position: absolute;
-        right: 4vh;
+        right: 2.5vh;
         top: 0;
         width: 250px;
         height: 250px;
@@ -41,7 +41,7 @@
 
         .build-persona__insight{
             position: absolute;
-            right: 4vh;
+            right: 2.5vh;
             top: 0;
             width: 180px;
             height: 180px;
@@ -60,6 +60,7 @@
     text-align: right;
     a{
         display: inline-block;
+        text-decoration: none;
         font-family: $hevleticaBold;
         font-size: 35px;
         line-height: 48px;
