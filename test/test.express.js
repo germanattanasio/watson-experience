@@ -29,6 +29,6 @@ describe('express', function testExpress() {
   });
 
   it('returns pi profile when GET /api/personality-insights', function testProfile(done) {
-    request(app).get('/foo/bar?twitter_id=germanatt').expect(200, done);
+    request(app).get('/api/personality-insights?twitter_id=ibmwatson').expect(200, done);
   });
 });
