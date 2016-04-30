@@ -34,6 +34,8 @@ var twitter = new TwitterHelper(process.env.TWITTER ? JSON.parse(process.env.TWI
 
 var personalityInsights = watson.personality_insights({
   url: 'https://gateway.watsonplatform.net/personality-insights/api',
+  username: '<username>',
+  password: '<password>',
   version: 'v2'
 });
 
