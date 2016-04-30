@@ -1,169 +1,97 @@
 [{
-    "id": 2,
-    "name": "build with Watson",
-    "initials": "Bw",
-    "description": "Enable cognitive computing in your app using IBM Watson APIs: Language, Vision, Speech and Data.",
-    "iframe_url": {
-        "developer": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
-        "startup": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
-        "millennial": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
-        "company leader": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html"
-    },
-    "technologies": "[\"watson\"]",
-    "created_at": null,
-    "updated_at": null
+  "id": 1,
+  "name": "build with Watson",
+  "initials": "Bw",
+  "description": "Enable cognitive computing in your app using IBM Watson APIs: Language, Vision, Speech and Data.",
+  "iframe_url": {
+    "developer": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
+    "startup": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
+    "millennial": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
+    "company leader": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html"
+  },
+  "technologies": "[\"watson\"]"
 }, {
-    "id": 12,
-    "name": "sports insight central",
-    "initials": "Si",
-    "description": "Use Watson to build a winning sports team.",
-    "iframe_url": {
-        "developer": "https://watsonbball.mybluemix.net/",
-        "startup": "https://watsonbball.mybluemix.net/",
-        "millennial": "https://watsonbball.mybluemix.net/",
-        "company leader": "https://watsonbball.mybluemix.net/"
-    },
-    "technologies": "[\"alchemydata_news\",\"personality_insights\",\"trade_off_analytics\"]",
-    "created_at": null,
-    "updated_at": null
+  "id": 2,
+  "name": "Visual Recognition",
+  "initials": "Vr",
+  "description": "A picture is worth 1,000 words. Use Visual Recognition to classify images.",
+  "iframe_url": {
+    "developer": "https://visual-recognition-demo.mybluemix.net/",
+    "startup": "https://visual-recognition-demo.mybluemix.net/",
+    "millennial": "https://visual-recognition-demo.mybluemix.net/",
+    "company leader": "https://visual-recognition-demo.mybluemix.net/"
+  },
+  "technologies": "[\"vision\",\"personality_insights\"]"
 }, {
-    "id": 22,
-    "name": "image insights",
-    "initials": "Ii",
-    "description": "A picture is worth 1,000 words. Let IBM Watson reveal your image personality.",
-    "iframe_url": {
-        "developer": "http://impressions.mybluemix.net/",
-        "startup": "http://impressions.mybluemix.net/",
-        "millennial": "http://impressions.mybluemix.net/",
-        "company leader": "http://impressions.mybluemix.net/"
-    },
-    "technologies": "[\"vision\",\"personality_insights\"]",
-    "created_at": null,
-    "updated_at": null
+  "id": 3,
+  "name": "Audio Analysis",
+  "initials": "Aa",
+  "description": "Analysis of the concepts that appear in Youtube videos",
+  "iframe_url": {
+    "developer": "https://audio-analysis-application-starter-kit.mybluemix.net/",
+    "startup": "https://audio-analysis-application-starter-kit.mybluemix.net/",
+    "millennial": "https://audio-analysis-application-starter-kit.mybluemix.net/",
+    "company leader": "https://audio-analysis-application-starter-kit.mybluemix.net/"
+  },
+  "technologies": "[\"discovery_advisor\"]"
 }, {
-    "id": 32,
-    "name": "PGA Match",
-    "initials": "Pm",
-    "description": "See which PGA and golf champs have the most similar personalities to yours!",
-    "iframe_url": {
-        "developer": "https://pga-match.mybluemix.net",
-        "startup": "https://pga-match.mybluemix.net",
-        "millennial": "https://pga-match.mybluemix.net",
-        "company leader": "https://pga-match.mybluemix.net"
-    },
-    "technologies": "[\"personality_insights\"]",
-    "created_at": null,
-    "updated_at": null
+  "id": 4,
+  "name": "News Explorer",
+  "initials": "Ne",
+  "description": "A personal view of the World assembled through the power of Watson. Amp up your news, dig deeper, find gold.",
+  "iframe_url": {
+    "developer": "http://news-explorer.mybluemix.net/?query=Maui",
+    "startup": "http://news-explorer.mybluemix.net/?query=Maui",
+    "millennial": "http://news-explorer.mybluemix.net/?query=Maui",
+    "company leader": "http://news-explorer.mybluemix.net/?query=Maui"
+  },
+  "technologies": "[\"alchemydata_news\"]"
 }, {
-    "id": 42,
-    "name": "discover ted",
-    "initials": "Dt",
-    "description": "Use Watson to go deep on TED, where the global community welcomes every discipline and culture.",
-    "iframe_url": {
-        "developer": "https://concept-insights-nodejs-cphsomnio-91.mybluemix.net/?concepts=application%20development%20workbench",
-        "startup": "https://concept-insights-nodejs-cphsomnio-91.mybluemix.net/?concepts=entrepreneurship",
-        "millennial": "https://concept-insights-nodejs-cphsomnio-91.mybluemix.net/?concepts=millennial%20generation",
-        "company leader": "https://concept-insights-nodejs-cphsomnio-91.mybluemix.net/?concepts=business%20management"
-    },
-    "technologies": "[\"concept_insights\"]",
-    "created_at": null,
-    "updated_at": null
+  "id": 5,
+  "name": "Movie Assistant",
+  "initials": "Ma",
+  "description": "Chat with Watson to discover new and upcoming movies by genre and rating.",
+  "iframe_url": {
+    "developer": "https://conversational-agent-application-starter-kit.mybluemix.net/",
+    "startup": "https://conversational-agent-application-starter-kit.mybluemix.net/",
+    "millennial": "https://conversational-agent-application-starter-kit.mybluemix.net/",
+    "company leader": "https://conversational-agent-application-starter-kit.mybluemix.net/"
+  },
+  "technologies": "[\"natural_language_classifier\",\"dialog\",\"themovieorg\"]"
 }, {
-    "id": 52,
-    "name": "UA fast physical",
-    "initials": "Ua",
-    "description": "In less than 60 seconds, you can get a snapshot of your health with UA Fast Physical.",
-    "iframe_url": {
-        "developer": "https://blog.underarmour.com/ua-fast-physical/store/sxsw",
-        "startup": "https://blog.underarmour.com/ua-fast-physical/store/sxsw",
-        "millennial": "https://blog.underarmour.com/ua-fast-physical/store/sxsw",
-        "company leader": "https://blog.underarmour.com/ua-fast-physical/store/sxsw"
-    },
-    "technologies": "[\"iot\",\"health\",\"developer\"]",
-    "created_at": null,
-    "updated_at": null
+  "id": 6,
+  "name": "celebrity match",
+  "initials": "Cm",
+  "description": "Discover your celebrity match based on your twitter personality.",
+  "iframe_url": {
+    "developer": "https://your-celebrity-match.mybluemix.net",
+    "startup": "https://your-celebrity-match.mybluemix.net",
+    "millennial": "https://your-celebrity-match.mybluemix.net",
+    "company leader": "https://your-celebrity-match.mybluemix.net"
+  },
+  "technologies": "[\"personality_insights\"]"
 }, {
-    "id": 62,
-    "name": "wundermap",
-    "initials": "Wm",
-    "description": "Checkout the data from the closest weather station. Setup your own personal station!",
-    "iframe_url": {
-        "developer": "https://www.wunderground.com/wundermap/?lat=33.5021365&lon=-82.0248163&zoom=10&type=terrain&units=english&pin=Austin%2C+TX%2C+USA&plat=30.26715&plon=-97.74306&tl.play=0&tl.spd=2&tl.dur=1&tl.frames=20&tl.mode=simple&groupSevere=1&groupHurricane=1&groupFire=1&groupCamsPhotos=1&groupRealEstate=1&eyedropper=0&drought=0&extremes=0&fault=0&favs=0&FemaFlood=0&fire=0&firewfas=0&fissures=0&fronts=0&hurrevac=0&hur=0&labels=0&lightning=0&livesurge=0&mm=0&ndfd=0&rad=1&rad.num=1&rad.spd=25&rad.opa=70&rad.type=00Q&rad.type2=&rad.smo=1&rad.noc=1&rad.stm=0&dir=1&dir.mode=driving&sst=0&sat=0&seismicrisk=0&svr=0&ski=0&snowfall=0&StateLines=0&stormreports=0&tor=0&tfk=0&tsunami=0&riv=0&wxsn=1&wxsn.mode=tw&wxsn.opa=50&wxsn.bcdgtemp=0&wxsn.rf=1&wxsn.showpws=1&cams=0&pix=0&PrecipStart=0",
-        "startup": "https://www.wunderground.com/wundermap/?lat=33.5021365&lon=-82.0248163&zoom=10&type=terrain&units=english&pin=Austin%2C+TX%2C+USA&plat=30.26715&plon=-97.74306&tl.play=0&tl.spd=2&tl.dur=1&tl.frames=20&tl.mode=simple&groupSevere=1&groupHurricane=1&groupFire=1&groupCamsPhotos=1&groupRealEstate=1&eyedropper=0&drought=0&extremes=0&fault=0&favs=0&FemaFlood=0&fire=0&firewfas=0&fissures=0&fronts=0&hurrevac=0&hur=0&labels=0&lightning=0&livesurge=0&mm=0&ndfd=0&rad=1&rad.num=1&rad.spd=25&rad.opa=70&rad.type=00Q&rad.type2=&rad.smo=1&rad.noc=1&rad.stm=0&dir=1&dir.mode=driving&sst=0&sat=0&seismicrisk=0&svr=0&ski=0&snowfall=0&StateLines=0&stormreports=0&tor=0&tfk=0&tsunami=0&riv=0&wxsn=1&wxsn.mode=tw&wxsn.opa=50&wxsn.bcdgtemp=0&wxsn.rf=1&wxsn.showpws=1&cams=0&pix=0&PrecipStart=0",
-        "millennial": "https://www.wunderground.com/wundermap/?lat=33.5021365&lon=-82.0248163&zoom=10&type=terrain&units=english&pin=Austin%2C+TX%2C+USA&plat=30.26715&plon=-97.74306&tl.play=0&tl.spd=2&tl.dur=1&tl.frames=20&tl.mode=simple&groupSevere=1&groupHurricane=1&groupFire=1&groupCamsPhotos=1&groupRealEstate=1&eyedropper=0&drought=0&extremes=0&fault=0&favs=0&FemaFlood=0&fire=0&firewfas=0&fissures=0&fronts=0&hurrevac=0&hur=0&labels=0&lightning=0&livesurge=0&mm=0&ndfd=0&rad=1&rad.num=1&rad.spd=25&rad.opa=70&rad.type=00Q&rad.type2=&rad.smo=1&rad.noc=1&rad.stm=0&dir=1&dir.mode=driving&sst=0&sat=0&seismicrisk=0&svr=0&ski=0&snowfall=0&StateLines=0&stormreports=0&tor=0&tfk=0&tsunami=0&riv=0&wxsn=1&wxsn.mode=tw&wxsn.opa=50&wxsn.bcdgtemp=0&wxsn.rf=1&wxsn.showpws=1&cams=0&pix=0&PrecipStart=0",
-        "company leader": "https://www.wunderground.com/wundermap/?lat=33.5021365&lon=-82.0248163&zoom=10&type=terrain&units=english&pin=Austin%2C+TX%2C+USA&plat=30.26715&plon=-97.74306&tl.play=0&tl.spd=2&tl.dur=1&tl.frames=20&tl.mode=simple&groupSevere=1&groupHurricane=1&groupFire=1&groupCamsPhotos=1&groupRealEstate=1&eyedropper=0&drought=0&extremes=0&fault=0&favs=0&FemaFlood=0&fire=0&firewfas=0&fissures=0&fronts=0&hurrevac=0&hur=0&labels=0&lightning=0&livesurge=0&mm=0&ndfd=0&rad=1&rad.num=1&rad.spd=25&rad.opa=70&rad.type=00Q&rad.type2=&rad.smo=1&rad.noc=1&rad.stm=0&dir=1&dir.mode=driving&sst=0&sat=0&seismicrisk=0&svr=0&ski=0&snowfall=0&StateLines=0&stormreports=0&tor=0&tfk=0&tsunami=0&riv=0&wxsn=1&wxsn.mode=tw&wxsn.opa=50&wxsn.bcdgtemp=0&wxsn.rf=1&wxsn.showpws=1&cams=0&pix=0&PrecipStart=0"
-    },
-    "technologies": "[\"weather_company_data\"]",
-    "created_at": null,
-    "updated_at": null
+  "id": 7,
+  "name": "Text to Speech",
+  "initials": "Ts",
+  "description": "The Text to Speech service understands text and natural language to generate synthesized audio.",
+  "iframe_url": {
+    "developer": "https://text-to-speech-demo.mybluemix.net/",
+    "startup": "https://text-to-speech-demo.mybluemix.net/",
+    "millennial": "https://text-to-speech-demo.mybluemix.net/",
+    "company leader": "https://text-to-speech-demo.mybluemix.net/"
+  },
+  "technologies": "[\"text_to_speech\"]"
 }, {
-    "id": 72,
-    "name": "Watson health",
-    "initials": "Wh",
-    "description": "Learn how Watson Health is accelerating insights that elevate the quality of care.",
-    "iframe_url": {
-        "developer": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/health/",
-        "startup": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/health/",
-        "millennial": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/health/",
-        "company leader": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/health/"
-    },
-    "technologies": "[\"discovery_advisor\"]",
-    "created_at": null,
-    "updated_at": null
-}, {
-    "id": 82,
-    "name": "emerging trends",
-    "initials": "Et",
-    "description": "See emerging trends, stay on top of current style and bring the cutting edge to customers.",
-    "iframe_url": {
-        "developer": "https://ibmwatsontrend.com/#/category/tech",
-        "startup": "https://ibmwatsontrend.com/#/search/what%20are%20the%20top%20corporate%20trends",
-        "millennial": "https://ibmwatsontrend.com/#/category/health",
-        "company leader": "https://ibmwatsontrend.com/#/search/what%20are%20the%20trends%20for%20business"
-    },
-    "technologies": "[\"trends\",\"benchmark_live\"]",
-    "created_at": null,
-    "updated_at": null
-}, {
-    "id": 92,
-    "name": "News Explorer",
-    "initials": "Ne",
-    "description": "A personal view of the World assembled through the power of Watson. Amp up your news, dig deeper, find gold.",
-    "iframe_url": {
-        "developer": "http://news-explorer.mybluemix.net/?query=PGA%20tour",
-        "startup": "http://news-explorer.mybluemix.net/?query=Current%20Events",
-        "millennial": "http://news-explorer.mybluemix.net/?query=golf",
-        "company leader": "http://news-explorer.mybluemix.net/?query=masters%20tournament"
-    },
-    "technologies": "[\"alchemydata_news\"]",
-    "created_at": null,
-    "updated_at": null
-}, {
-    "id": 102,
-    "name": "Watson analytics",
-    "initials": "Wa",
-    "description": "Learn how Watson Analytics makes advanced analytics easy and accessible.",
-    "iframe_url": {
-        "developer": "https://www.youtube.com/embed/FXgjD_m7v-A",
-        "startup": "https://www.youtube.com/embed/FXgjD_m7v-A",
-        "millennial": "https://www.youtube.com/embed/FXgjD_m7v-A",
-        "company leader": "https://www.youtube.com/embed/FXgjD_m7v-A"
-    },
-    "technologies": "[\"analytics\"]",
-    "created_at": null,
-    "updated_at": null
-}, {
-    "id": 112,
-    "name": "celebrity match",
-    "initials": "Cm",
-    "description": "Discover your celebrity match based on your twitter personality.",
-    "iframe_url": {
-        "developer": "https://your-celebrity-match.mybluemix.net",
-        "startup": "https://your-celebrity-match.mybluemix.net",
-        "millennial": "https://your-celebrity-match.mybluemix.net",
-        "company leader": "https://your-celebrity-match.mybluemix.net"
-    },
-    "technologies": "[\"personality_insights\"]",
-    "created_at": null,
-    "updated_at": null
+  "id": 8,
+  "name": "Personalized Recommendations",
+  "initials": "Pr",
+  "description": "Personalized Recommendations is a tool that helps you find the best vacation spots to go to.",
+  "iframe_url": {
+    "developer": "http://personalized-recommendations.mybluemix.net/",
+    "startup": "http://personalized-recommendations.mybluemix.net/",
+    "millennial": "http://personalized-recommendations.mybluemix.net/",
+    "company leader": "http://personalized-recommendations.mybluemix.net/"
+  },
+  "technologies": "[\"tradeoff_analytics\", \"concept_insights\"]"
 }]

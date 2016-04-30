@@ -16,32 +16,31 @@
 
 'use strict';
 
-require('dotenv').config({ silent: true });
+require('dotenv').config({
+  silent: true
+});
 
 var express = require('express');
 var app = express();
-// var TwitterHelper = require('./twitter-helper');
-// var watson = require('watson-developer-cloud');
-//
-// var twitter = new TwitterHelper(process.env.TWITTER ? JSON.parse(process.env.TWITTER) : [{
-//   consumer_key: '<consumer_key>',
-//   consumer_secret: '<consumer_secret>',
-//   access_token_key: '<access_token_key>',
-//   access_token_secret: '<access_token_secret>'
-// }]);
-//
-// var personalityInsights = watson.personality_insights({
-//   url: 'https://gateway.watsonplatform.net/personality-insights/api',
-//   username: '<username>',
-//   password: '<password>',
-//   version: 'v2'
-// });
+var TwitterHelper = require('./twitter-helper');
+var watson = require('watson-developer-cloud');
+
+var twitter = new TwitterHelper(process.env.TWITTER ? JSON.parse(process.env.TWITTER) : [{
+  consumer_key: '<consumer_key>',
+  consumer_secret: '<consumer_secret>',
+  access_token_key: '<access_token_key>',
+  access_token_secret: '<access_token_secret>'
+}]);
+
+var personalityInsights = watson.personality_insights({
+  url: 'https://gateway.watsonplatform.net/personality-insights/api',
+  version: 'v2'
+});
 
 // Bootstrap application settings
 require('./config/express')(app);
 
 app.get('/', function (req, res) {
-  console.log('session:', req.session);
   if (!req.session.id) {
     res.render('welcome');
   } else {
@@ -50,50 +49,79 @@ app.get('/', function (req, res) {
 });
 
 app.get('/offline', function offline(req, res) {
-  console.log('session:', req.session);
   res.render('offline');
 });
 
 app.get('/dashboard', function dashboard(req, res) {
-  console.log('session:', req.session);
   res.render('dashboard');
 });
 
 app.get('/insights', function insights(req, res) {
-  console.log('session:', req.session);
   res.render('insights');
 });
 
 app.get('/logout', function logout(req, res) {
-  console.log('session:', req.session);
   req.session = null;
   res.redirect('/');
 });
 
 app.post('/tracker', function tracker(req, res) {
-  console.log('/tracker', req.session);
   res.json({});
 });
 
 app.get('/user', function findOrCreateUser(req, res) {
   if (!req.session.id) {
-    req.session.id = new Date();
-    req.session.gretting = 'Hello';
-    req.session.image = '/images/watson.jpg';
-    req.session.role = 'company leader';
+    req.session = {
+      id: new Date(),
+      gretting: 'Hello',
+      image: '/images/watson.jpg',
+      role: 'company leader'
+    };
   }
-  res.json({ id: req.session.id });
+  res.json({
+    id: req.session.id
+  });
 });
 
-app.post('/user', function updateUser(req, res) {
+app.post('/user', function updateUser(req, res, next) {
   req.session.twitter_id = req.body.twitter_id || 'ibmwatson';
   req.session.email = req.query.email;
-  res.json({ status: 'success' });
+  twitter.getUser(req.session.twitter_id, function getUser(err, user) {
+    if (err) {
+      next(err);
+    } else {
+      req.session.gretting = 'Hello ' + user.name;
+      req.session.image = user.image;
+      req.session.name = user.name;
+      res.json({
+        status: 'success'
+      });
+    }
+  });
 });
 
-app.get('/api/personality-insights', function pi(req, res) {
-  console.log('Personality Insights for twitter:', req.query.twitter_id);
-  res.json(require('./test/resources/profile.json'));
+app.get('/api/personality-insights', function pi(req, res, next) {
+  var username = req.query.twitter_id;
+  if (username === 'ibmwatson') {
+    return res.json(require('./test/resources/profile.json'));
+  }
+  console.log('Getting the tweets for:', username);
+  twitter.getTweets(username, function getTweets(err, tweets) {
+    if (err) {
+      next(err);
+    } else {
+      console.log(username, 'has', tweets.length, 'tweets');
+      personalityInsights.profile({
+        contentItems: tweets
+      }, function getProfile(error, profile) {
+        if (error) {
+          next(error);
+        } else {
+          res.json(profile);
+        }
+      });
+    }
+  });
 });
 
 require('./config/error-handler')(app);

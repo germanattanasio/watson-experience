@@ -79,8 +79,6 @@ function TwitterHelper(configs) {
 TwitterHelper.prototype.getInstance = function () {
   var instance = this.count % this.twit.length;
   this.count ++;
-
-  console.log('instance', instance);
   return this.twit[instance];
 };
 
@@ -124,11 +122,8 @@ TwitterHelper.prototype.getTweets = function (screenName, callback) {
  * It looks at params to determinate what to use
  */
 TwitterHelper.prototype.getUsers = function (params, callback) {
-  console.log('getUsers:', params);
-
   this.getInstance().post('/users/lookup.json', params, function (users) {
     if (users.statusCode) {
-      console.log('error getting the twitter users');
       callback(users);
     } else {
       callback(null, users.map(toAppUser.bind(null)));
@@ -142,7 +137,6 @@ TwitterHelper.prototype.getUsers = function (params, callback) {
 TwitterHelper.prototype.getUser = function (screenName, callback) {
   this.getInstance().showUser(screenName, function (user) {
     if (user.statusCode) {
-      console.log(screenName, 'is not a valid twitter');
       callback(user);
     } else {
       callback(null, toAppUser(user));

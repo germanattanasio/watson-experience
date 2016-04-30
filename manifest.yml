@@ -10,5 +10,4 @@ applications:
   path: .
   memory: 512M
   env:
-    CF_STAGING_TIMEOUT: 15
-    CF_STARTUP_TIMEOUT: 180 # 3 minutes
+    NPM_CONFIG_PRODUCTION: false

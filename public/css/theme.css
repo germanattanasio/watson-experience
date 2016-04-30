@@ -7771,8 +7771,8 @@ aside {
     position: absolute;
     top: 46.75vh;
     left: 23vw;
-    bottom: 8.5vh;
-    right: 8.5vh; }
+    bottom: 4.5vh;
+    right: 5.5vh; }
   .page-content .content {
     width: 59vw;
     position: absolute;
@@ -7794,7 +7794,7 @@ aside {
     top: 0;
     left: 0;
     height: 100px;
-    padding: 0 0 0 30px; }
+    padding: 0 0 0 0px; }
     .page-content .content__appeal:after {
       content: '';
       position: absolute;

@@ -5,14 +5,14 @@
     top: 0;
     height: 100vh;
     width: 100vw;
-    
+
     .page-content__inner{
         color: $white;
         position: absolute;
         top: 46.75vh;
         left: 23vw;
-        bottom: 8.5vh;
-        right: 8.5vh;
+        bottom: 4.5vh;
+        right: 5.5vh;
     }
 
     .content{
@@ -46,7 +46,7 @@
         top: 0;
         left: 0;
         height: 100px;
-        padding: 0 0 0 30px;
+        padding: 0 0 0 0px;
         &:after{
             content: '';
             position: absolute;

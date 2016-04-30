@@ -17,7 +17,7 @@ block content
       .dashboard-apps__wrapper
         .apps-wrap
           #apps-stack-1.apps-stack
-            div(v-bind:class="{'apps-stack__item': true, 'visited': isAppVisited(app.name),  'active': partially_opened_app == app.id}", v-if='index <= 3', v-for='(index,app) in applications')
+            div(v-bind:class="{'apps-stack__item': true, 'visited': isAppVisited(app.name),  'active': partially_opened_app == app.id}", v-if='index <= 2', v-for='(index,app) in applications')
               .item-inner(v-on:click='changeApp(app.id,app.name,$event)')
                 b {{app.initials}}
                 span {{app.name}}
@@ -28,7 +28,7 @@ block content
                 i.icon-ico-hand
                 i.button__close-app.icon-ico-cross(v-touch:tap='closeApp()', style='z-index: 1000000')
           #apps-stack-2.apps-stack
-            div(v-bind:class="{'apps-stack__item': true, 'visited': isAppVisited(app.name), 'active': partially_opened_app == app.id}", v-if='index > 3 && index <= 7', v-for='(index,app) in applications')
+            div(v-bind:class="{'apps-stack__item': true, 'visited': isAppVisited(app.name), 'active': partially_opened_app == app.id}", v-if='index > 2 && index <= 5', v-for='(index,app) in applications')
               .item-inner(v-on:click='changeApp(app.id,app.name,$event)')
                 b {{app.initials}}
                 span {{app.name}}
@@ -39,7 +39,7 @@ block content
                 i.icon-ico-hand
                 i.button__close-app.icon-ico-cross(v-touch:tap='closeApp()', style='z-index: 1000000')
           #apps-stack-3.apps-stack.apps-stack-last
-            div(v-bind:class="{'apps-stack__item': true, 'visited': isAppVisited(app.name), 'active': partially_opened_app == app.id}", v-if='index > 7', v-for='(index,app) in applications')
+            div(v-bind:class="{'apps-stack__item': true, 'visited': isAppVisited(app.name), 'active': partially_opened_app == app.id}", v-if='index > 5', v-for='(index,app) in applications')
               .item-inner(v-on:click='changeApp(app.id,app.name,$event)')
                 b {{app.initials}}
                 span {{app.name}}
