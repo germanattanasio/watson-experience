@@ -7,64 +7,60 @@
 // 	to { opacity: 1; }
 // }
 @mixin keyframes($name) {
-	@-webkit-keyframes #{$name} {
-		@content;
-	}
-
-	@-moz-keyframes #{$name} {
-		@content;
-	}
-
-	@keyframes #{$name} {
-		@content;
-	}
+   @-webkit-keyframes #{$name}{
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+     @content;
+  }
+  @keyframes #{$name} {
+     @content;
+  }
 }
 
 // Animate
 // Usage EG: @include animate($name: fade-in, $duration: 1s, $count: 1, $timing: ease-in-out);
 @mixin animate($name, $duration, $count, $timing, $direction: false, $delay: false) {
-    -webkit-animation-name: #{$name};
-       -moz-animation-name: #{$name};
-         -o-animation-name: #{$name};
-            animation-name: #{$name};
+  -webkit-animation-name: #{$name};
+  -moz-animation-name: #{$name};
+  -o-animation-name: #{$name};
+  animation-name: #{$name};
+  @if $delay != false {
+    -webkit-animation-delay: #{$delay};
+    -moz-animation-delay: #{$delay};
+    -o-animation-delay: #{$delay};
+    animation-delay: #{$delay};
+  }
+  @if $direction != false {
+    -webkit-animation-direction: #{$direction};
+    -moz-animation-direction: #{$direction};
+    -o-animation-direction: #{$direction};
+    animation-direction: #{$direction};
+  }
 
-    @if $delay != false {
-	    -webkit-animation-delay: #{$delay};
-	       -moz-animation-delay: #{$delay};
-	         -o-animation-delay: #{$delay};
-	            animation-delay: #{$delay};
-	}
+  -webkit-animation-duration: #{$duration};
+  -moz-animation-duration: #{$duration};
+  -o-animation-duration: #{$duration};
+  animation-duration: #{$duration};
 
-    @if $direction != false {
-	    -webkit-animation-direction: #{$direction};
-	       -moz-animation-direction: #{$direction};
-	         -o-animation-direction: #{$direction};
-	            animation-direction: #{$direction};
-	}
+  -webkit-animation-iteration-count: #{$count};
+  -moz-animation-iteration-count: #{$count};
+  -o-animation-iteration-count: #{$count};
+  animation-iteration-count: #{$count};
 
-    -webkit-animation-duration: #{$duration};
-       -moz-animation-duration: #{$duration};
-         -o-animation-duration: #{$duration};
-            animation-duration: #{$duration};
-
-    -webkit-animation-iteration-count: #{$count};
-       -moz-animation-iteration-count: #{$count};
-         -o-animation-iteration-count: #{$count};
-            animation-iteration-count: #{$count};
-
-    -webkit-animation-timing-function: #{$timing};
-       -moz-animation-timing-function: #{$timing};
-         -o-animation-timing-function: #{$timing};
-            animation-timing-function: #{$timing};
+  -webkit-animation-timing-function: #{$timing};
+  -moz-animation-timing-function: #{$timing};
+  -o-animation-timing-function: #{$timing};
+  animation-timing-function: #{$timing};
 }
 
 // Fade in
 @include keyframes($name: "fade-in") {
-	from {
-		opacity: 0;
-	}
+  from {
+    opacity: 0;
+  }
 
-	to {
-		opacity: 1;
-	}
+  to {
+    opacity: 1;
+  }
 }

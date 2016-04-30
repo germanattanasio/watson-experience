@@ -1,40 +1,38 @@
 @mixin btn {
-    background: $col-attention;
-    @include bb;
-    border: 1px solid $col-attention;
-    @include border-radius(11px);
-    color: $white;
-    display: inline-block;
-    font-family: $font-base;
-    font-size: 22px;
-    line-height: 60px;
-    height: 60px;
-    min-width: 240px;
-    overflow: visible; // IE
-    padding: 0 20px;
-    text-align: center;
-    text-transform: uppercase;
-    @include transition(border 0.25s, background 0.25s, color 0.25s);
-    white-space: nowrap;
-    width: auto;
-
-    &:hover,
-    &:focus {
-        color: $col-attention;
-        border-color: $col-attention;
-        background: transparent;
-    }
-
-    @include no-touch-hover {
-        color: $col-attention;
-        border-color: $col-attention;
-        background: transparent;
-    }
+  background: $col-attention;
+  @include bb;
+  border: 1px solid $col-attention;
+  @include border-radius(11px);
+  color: $white;
+  display: inline-block;
+  font-family: $font-base;
+  font-size: 22px;
+  line-height: 60px;
+  height: 60px;
+  min-width: 240px;
+  overflow: visible; // IE
+  padding: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  @include transition(border 0.25s, background 0.25s, color 0.25s);
+  white-space: nowrap;
+  width: auto;
+  &:focus,
+  &:hover {
+    color: $col-attention;
+    border-color: $col-attention;
+    background: transparent;
+  }
+  @include no-touch-hover {
+    color: $col-attention;
+    border-color: $col-attention;
+    background: transparent;
+  }
 
 }
 
 .lines-button {
-/*    display: inline-block;
+  /*    display: inline-block;
     padding: $panel-button-size/2 $panel-button-size/4;
     transition: .3s;
     cursor: pointer;
@@ -45,5 +43,5 @@
 
 // Button
 %btn {
-    @include btn;
+  @include btn;
 }

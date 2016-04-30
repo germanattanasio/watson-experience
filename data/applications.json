@@ -5,9 +5,7 @@
   "description": "Enable cognitive computing in your app using IBM Watson APIs: Language, Vision, Speech and Data.",
   "iframe_url": {
     "developer": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
-    "startup": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
-    "millennial": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
-    "company leader": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html"
+    "startup": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html"
   },
   "technologies": "[\"watson\"]"
 }, {
@@ -17,11 +15,9 @@
   "description": "A picture is worth 1,000 words. Use Visual Recognition to classify images.",
   "iframe_url": {
     "developer": "https://visual-recognition-demo.mybluemix.net/",
-    "startup": "https://visual-recognition-demo.mybluemix.net/",
-    "millennial": "https://visual-recognition-demo.mybluemix.net/",
-    "company leader": "https://visual-recognition-demo.mybluemix.net/"
+    "startup": "https://visual-recognition-demo.mybluemix.net/"
   },
-  "technologies": "[\"vision\",\"visual_recognition\"]"
+  "technologies": "[\"alchemy_vision\", \"visual_recognition\"]"
 }, {
   "id": 3,
   "name": "Audio Analysis",
@@ -29,9 +25,7 @@
   "description": "Analysis of the concepts that appear in Youtube videos",
   "iframe_url": {
     "developer": "https://audio-analysis-application-starter-kit.mybluemix.net/",
-    "startup": "https://audio-analysis-application-starter-kit.mybluemix.net/",
-    "millennial": "https://audio-analysis-application-starter-kit.mybluemix.net/",
-    "company leader": "https://audio-analysis-application-starter-kit.mybluemix.net/"
+    "startup": "https://audio-analysis-application-starter-kit.mybluemix.net/"
   },
   "technologies": "[\"speech_to_text\",\"concept_insights\"]"
 }, {
@@ -41,9 +35,7 @@
   "description": "A personal view of the World assembled through the power of Watson. Amp up your news, dig deeper, find gold.",
   "iframe_url": {
     "developer": "http://news-explorer.mybluemix.net/?query=Maui",
-    "startup": "http://news-explorer.mybluemix.net/?query=Maui",
-    "millennial": "http://news-explorer.mybluemix.net/?query=Maui",
-    "company leader": "http://news-explorer.mybluemix.net/?query=Maui"
+    "startup": "http://news-explorer.mybluemix.net/?query=Maui"
   },
   "technologies": "[\"alchemydata_news\"]"
 }, {
@@ -53,21 +45,17 @@
   "description": "Chat with Watson to discover new and upcoming movies by genre and rating.",
   "iframe_url": {
     "developer": "https://conversational-agent-application-starter-kit.mybluemix.net/",
-    "startup": "https://conversational-agent-application-starter-kit.mybluemix.net/",
-    "millennial": "https://conversational-agent-application-starter-kit.mybluemix.net/",
-    "company leader": "https://conversational-agent-application-starter-kit.mybluemix.net/"
+    "startup": "https://conversational-agent-application-starter-kit.mybluemix.net/"
   },
-  "technologies": "[\"natural_language_classifier\",\"dialog\",\"themovieorg\"]"
+  "technologies": "[\"natural_language_classifier\",\"dialog\"]"
 }, {
   "id": 6,
-  "name": "celebrity match",
+  "name": "Celebrity Match",
   "initials": "Cm",
   "description": "Discover your celebrity match based on your twitter personality.",
   "iframe_url": {
     "developer": "https://your-celebrity-match.mybluemix.net",
-    "startup": "https://your-celebrity-match.mybluemix.net",
-    "millennial": "https://your-celebrity-match.mybluemix.net",
-    "company leader": "https://your-celebrity-match.mybluemix.net"
+    "startup": "https://your-celebrity-match.mybluemix.net"
   },
   "technologies": "[\"personality_insights\"]"
 }, {
@@ -77,9 +65,7 @@
   "description": "The Text to Speech service understands text and natural language to generate synthesized audio.",
   "iframe_url": {
     "developer": "https://text-to-speech-demo.mybluemix.net/",
-    "startup": "https://text-to-speech-demo.mybluemix.net/",
-    "millennial": "https://text-to-speech-demo.mybluemix.net/",
-    "company leader": "https://text-to-speech-demo.mybluemix.net/"
+    "startup": "https://text-to-speech-demo.mybluemix.net/"
   },
   "technologies": "[\"text_to_speech\"]"
 }, {
@@ -89,9 +75,7 @@
   "description": "Personalized Recommendations is a tool that helps you find the best vacation spots to go to.",
   "iframe_url": {
     "developer": "http://personalized-recommendations.mybluemix.net/",
-    "startup": "http://personalized-recommendations.mybluemix.net/",
-    "millennial": "http://personalized-recommendations.mybluemix.net/",
-    "company leader": "http://personalized-recommendations.mybluemix.net/"
+    "startup": "http://personalized-recommendations.mybluemix.net/"
   },
   "technologies": "[\"tradeoff_analytics\", \"concept_insights\"]"
 }]

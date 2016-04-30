@@ -1,12 +1,9 @@
 @import 'base/vars';
 @import 'base/animations';
 @import 'base/mixins';
-
 @import "vendors/font-awesome/font-awesome";
-
 @import 'vendors/bootstrap';
 @import 'vendors/keyboard';
-
 @import 'vendors/animate';
 
 //@import "vendors/slick";
@@ -14,7 +11,6 @@
 @import 'base/reset';
 @import 'base/helpers';
 @import 'base/buttons';
-
 @import "components/header";
 @import "components/footer";
 @import "components/page-content";
@@ -24,23 +20,22 @@
 @import "components/toc";
 @import "components/dashboard-main";
 
-
 #sunburstChartContainer {
-    position: absolute;
-    width: 1000px;
-    top: 0px;
-    left: 50%;
-    margin-left: -500px;
-    z-index: 10000;
-    height: 750px;
+  position: absolute;
+  width: 1000px;
+  top: 0;
+  left: 50%;
+  margin-left: -500px;
+  z-index: 10000;
+  height: 750px;
 }
 
 #sunburst-transparent {
-    background: fade-out(#333D3E,.05);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
+  background: fade-out(#333D3E,.05);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
 }

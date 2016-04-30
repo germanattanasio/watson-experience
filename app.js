@@ -65,17 +65,13 @@ app.get('/logout', function logout(req, res) {
   res.redirect('/');
 });
 
-app.post('/tracker', function tracker(req, res) {
-  res.json({});
-});
-
 app.get('/user', function findOrCreateUser(req, res) {
   if (!req.session.id) {
     req.session = {
       id: new Date(),
       gretting: 'Hello',
       image: '/images/watson.jpg',
-      role: 'company leader'
+      role: 'developer'
     };
   }
   res.json({

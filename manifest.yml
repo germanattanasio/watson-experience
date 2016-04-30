@@ -9,5 +9,3 @@ applications:
   command: npm start
   path: .
   memory: 512M
-  env:
-    NPM_CONFIG_PRODUCTION: false

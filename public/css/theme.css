@@ -7946,6 +7946,7 @@ aside {
   .build-persona__continue a {
     display: inline-block;
     text-decoration: none;
+    cursor: pointer;
     font-family: "HelveticaNeueLTStd-Bd", Helvetica, Arial, sans-serif;
     font-size: 35px;
     line-height: 48px;
@@ -7987,7 +7988,7 @@ aside {
 #askTwitterModal h1 {
   color: white;
   text-align: center;
-  margin: 0 0 25px 0; }
+  margin: 0 0 25px; }
 
 #askTwitterModal.modal {
   text-align: center;
@@ -8017,7 +8018,7 @@ aside {
   padding: 0;
   background: #F05254;
   border-radius: 0;
-  border: 0px none; }
+  border: 0 none; }
 
 #askTwitterModal .modal-body {
   padding: 0; }
@@ -8027,12 +8028,12 @@ aside {
   font-family: "HelveticaNeueLTStd-Lt", Helvetica, Arial, sans-serif;
   font-size: 25px;
   display: block;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
   padding: 0 0 0 180px;
   background: url("../images/ico-twitter.svg") no-repeat 0 0/147px 119px; }
 
 #askTwitterModal .modal-row__input {
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px; }
   #askTwitterModal .modal-row__input .input-with-icon {
     position: relative; }
   #askTwitterModal .modal-row__input i {
@@ -8059,13 +8060,10 @@ aside {
 #askTwitterModal .modal-row__button {
   text-align: right; }
   #askTwitterModal .modal-row__button a {
-    height: 60px;
-    line-height: 60px;
     font-family: "HelveticaNeueLTStd-Lt", Helvetica, Arial, sans-serif;
     font-size: 25px;
     color: #EFF2F5;
     display: inline-block;
-    width: 160px;
     vertical-align: middle; }
     #askTwitterModal .modal-row__button a i {
       vertical-align: middle;
@@ -8099,30 +8097,34 @@ aside {
   padding: 15px;
   background: #333D3E;
   border-radius: 0;
-  border: 0px none; }
+  border: 0 none; }
 
 #privacy-modal .modal-row__title p {
   color: #EFF2F5;
   font-family: "HelveticaNeueLTStd-Lt", Helvetica, Arial, sans-serif;
   font-size: 25px;
   display: block;
-  margin: 0 0 20px 0;
-  padding: 0 0 0 0px;
+  margin: 0 0 20px;
+  padding: 0;
   text-align: center; }
 
 #privacy-modal .privacy-box {
   height: 400px;
   overflow-y: scroll; }
-  #privacy-modal .privacy-box p, #privacy-modal .privacy-box li, #privacy-modal .privacy-box a {
+  #privacy-modal .privacy-box a,
+  #privacy-modal .privacy-box li,
+  #privacy-modal .privacy-box p {
     color: white;
     font-size: 15px;
     font-family: "HelveticaNeueLTStd-Lt", Helvetica, Arial, sans-serif;
     text-align: left; }
-  #privacy-modal .privacy-box p, #privacy-modal .privacy-box ul, #privacy-modal .privacy-box ol {
+  #privacy-modal .privacy-box ol,
+  #privacy-modal .privacy-box p,
+  #privacy-modal .privacy-box ul {
     margin: 0 25px 15px 0; }
 
 #privacy-modal .modal-row__input {
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px; }
   #privacy-modal .modal-row__input input {
     border: 1px solid #323d3c;
     height: 50px;
@@ -8172,19 +8174,19 @@ aside {
   padding: 15px;
   background: #333D3E;
   border-radius: 0;
-  border: 0px none; }
+  border: 0 none; }
 
 #ask-for-terms .modal-row__title p {
   color: #EFF2F5;
   font-family: "HelveticaNeueLTStd-Lt", Helvetica, Arial, sans-serif;
   font-size: 25px;
   display: block;
-  margin: 0 0 20px 0;
-  padding: 0 0 0 0px;
+  margin: 0 0 20px;
+  padding: 0;
   text-align: center; }
 
 #ask-for-terms .modal-row__input {
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px; }
   #ask-for-terms .modal-row__input input {
     border: 1px solid #323d3c;
     height: 50px;
@@ -9012,7 +9014,7 @@ aside {
 #sunburstChartContainer {
   position: absolute;
   width: 1000px;
-  top: 0px;
+  top: 0;
   left: 50%;
   margin-left: -500px;
   z-index: 10000;

@@ -4,10 +4,10 @@ $image-dir: "../images/";
 $fonts: '../fonts/';
 // fonts
 
-$hevleticaThin: "HelveticaNeueLTStd-UltLt",  Helvetica, Arial, sans-serif;
-$hevleticaLt: "HelveticaNeueLTStd-Lt",  Helvetica, Arial, sans-serif;
-$hevleticaBold: "HelveticaNeueLTStd-Bd",  Helvetica, Arial, sans-serif;
-$hevletica: "HelveticaNeueLTStd-Roman",  Helvetica, Arial, sans-serif;
+$hevleticaThin: "HelveticaNeueLTStd-UltLt", Helvetica, Arial, sans-serif;
+$hevleticaLt: "HelveticaNeueLTStd-Lt", Helvetica, Arial, sans-serif;
+$hevleticaBold: "HelveticaNeueLTStd-Bd", Helvetica, Arial, sans-serif;
+$hevletica: "HelveticaNeueLTStd-Roman", Helvetica, Arial, sans-serif;
 $arial: Arial, sans-serif;
 
 $site-width: 1920px;
@@ -19,7 +19,6 @@ $font-base: $hevletica;
 
 // opacity
 $hover-opacity: 0.85;
-
 
 // colors
 $white: #EFF2F5;
@@ -78,8 +77,7 @@ $db-r-components-button-border: 3px;
 $db-app-size: 160px;
 $db-app-gutter: 30px;
 
-
-$panel-button-size : $db-panel-button;
-$panel-r-button-size : $db-r-panel-button;
+$panel-button-size: $db-panel-button;
+$panel-r-button-size: $db-r-panel-button;
 $panel-button-width: 1px;
-$panel-transition: .3s;
+$panel-transition: 0.3s;
