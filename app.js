@@ -82,7 +82,9 @@ app.get('/user', function findOrCreateUser(req, res) {
 });
 
 app.post('/user', function updateUser(req, res, next) {
-  req.session.twitter_id = req.body.twitter_id || 'ibmwatson';
+  var username = req.body.twitter_id || 'ibmwatson';
+  username = username.replace(new RegExp('@', 'g'), '');
+  req.session.twitter_id = username;
   req.session.email = req.query.email;
   twitter.getUser(req.session.twitter_id, function getUser(err, user) {
     if (err) {

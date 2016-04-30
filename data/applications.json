@@ -4,8 +4,8 @@
   "initials": "Bw",
   "description": "Enable cognitive computing in your app using IBM Watson APIs: Language, Vision, Speech and Data.",
   "iframe_url": {
-    "developer": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
-    "startup": "http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html"
+    "developer": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html",
+    "startup": "https://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/index.html"
   },
   "technologies": "[\"watson\"]"
 }, {
@@ -34,8 +34,8 @@
   "initials": "Ne",
   "description": "A personal view of the World assembled through the power of Watson. Amp up your news, dig deeper, find gold.",
   "iframe_url": {
-    "developer": "http://news-explorer.mybluemix.net/?query=Maui",
-    "startup": "http://news-explorer.mybluemix.net/?query=Maui"
+    "developer": "https://news-explorer.mybluemix.net/?query=Maui",
+    "startup": "https://news-explorer.mybluemix.net/?query=Maui"
   },
   "technologies": "[\"alchemydata_news\"]"
 }, {
@@ -74,8 +74,8 @@
   "initials": "Pr",
   "description": "Personalized Recommendations is a tool that helps you find the best vacation spots to go to.",
   "iframe_url": {
-    "developer": "http://personalized-recommendations.mybluemix.net/",
-    "startup": "http://personalized-recommendations.mybluemix.net/"
+    "developer": "https://personalized-recommendations.mybluemix.net/",
+    "startup": "https://personalized-recommendations.mybluemix.net/"
   },
   "technologies": "[\"tradeoff_analytics\", \"concept_insights\"]"
 }]
