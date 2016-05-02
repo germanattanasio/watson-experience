@@ -17,4 +17,4 @@ deploy:
   space: appgallery
   on:
     repo: germanattanasio/watson-experience
-    branch: master
+    branch: release
